@@ -1,38 +1,63 @@
+:root{
+  --header: #243119;
+  --background: #C9F2C7;
+  --olive: #96BE8C;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--background);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App > h1{
+  margin: 45vh auto 0 auto;
+  font-size: 30px;
+  color: var(--header);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-container{
+   width: 50%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.search-input{
+  width: 90%;
+  height: 30px;
+  border: 0.3px solid black;
+  border-radius: 20px;
+}
+
+.search-container > i{
+  border-radius: 50%;
+}
+
+.search-container > i:hover{
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.App > .suggestions{
+  width: 50%;
+}
+
+.suggestions > .suggest{
+  width: 90%;
+  margin-top: 5px;
+  color: var(--header);
+  font-weight: bold;
+  border: 1px solid var(--olive);
+  border-radius: 50px;
+  text-align: center;
+}
+
+.suggestions > .suggest:hover{
+  cursor: pointer;
+  background-color: var(--olive);
+  transform: scale(1.2);
 }
